@@ -44,63 +44,16 @@ def navbar() -> rx.Component:
                     "BADNCAMP",
                     "left",
                 ),
+                flex_direction=["column", "column", "column", "row", "row"], #TODO Responsive, cambiar los  nombres, por iconos al detectar que se trata de un dispositivo movil 
+                #?ENCONTRE UNA POISBLE SOLUCION AQUI https://youtu.be/h8Tn0ITRoQs?si=TEXvWLFatM8urvGf&t=7046
+                #rx.mobie_only()
             ),
+            
         ),
-        padding_top=Size.BIG.value,
+        position="sticky",
+        padding_top=Size.MEDIUM.value,
         center_content=True,
+        # ? estoy en duda si fija la barrar de navegacion o no
+        z_index="999",
+        top="0",
     )
-
-
-
-
-
-# rx.vstack( #TODO poner botones a los lados del logo
-#         rx.center(
-#             rx.hstack(
-#                 rx.hstack(
-#                     link(
-#                         url.BANDCAMP, #TODO cambiar por los links correctos
-#                         "MUSICA",
-#                     ),    
-#                     link(
-#                         url.FACEBOOK,
-#                         "VIDEOS",  
-#                     ),
-#                     link(
-#                         url.INSTAGRAM,
-#                         "HISTORIA",
-#                     ),
-#                     spacing=Size.VERY_BIG.value,
-#                 ),
-#                 rx.center(#Centra el logo en el navbar
-#                     rx.image(
-#                         src="logo_arsenal.png",
-#                         alt="Logo de la banda Arsenal de Odio",
-#                         width="55%",
-#                         height="55%",
-#                     ),
-#                 ),  
-#                 rx.spacer(),
-#                 rx.hstack(# Pinta los botones de las redes sociales
-#                     link_icon(
-#                     "icons/facebook.svg",
-#                     url.FACEBOOK,
-#                     "FACEBOOK"
-#                     ),
-#                     link_icon(
-#                         "icons/instagram.svg",
-#                         url.INSTAGRAM,
-#                         "INSTAGRAM"
-#                     ),
-#                     link_icon(
-#                         "icons/bandcamp.svg",
-#                         url.BANDCAMP,
-#                         "BADNCAMP"
-#                     ),
-#                     spacing=Size.VERY_BIG.value,
-#                 ),
-#                 width="100%",
-#             ),
-#         ),
-
-#     )

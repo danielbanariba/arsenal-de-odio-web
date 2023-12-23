@@ -7,7 +7,7 @@ import arsenal_de_odio_web.styles.styles as styles
 def header() -> rx.Component:
     return rx.vstack(
         rx.heading(
-                "Muerte en el Mosh",
+                "MUERTE EN EL MOSH",
                size="lg",
                padding_bottom=Size.DEFAULT.value,
             ),
@@ -16,8 +16,7 @@ def header() -> rx.Component:
                 src="img/portada.jpg",
                 alt="Arsenal de Odio - Muerte en el Mosh",
                 width="50%", #16em
-                heigh="50%",
-                margin_rigth=Size.BIG.value,
+                heigh="50%"
             ),
             rx.vstack(
                 rx.span(
@@ -44,8 +43,6 @@ def header() -> rx.Component:
             ),
             flex_direction=["column", "column", "column", "row", "row"], #Responsive
         ),
-        align_items="start",
-        padding_x=Size.VERY_BIG.value,
-        width="100%",
-        max_width=styles.MAX_WIDTH,                                 
+        padding_top=Size.VERY_BIG.value,
+        style=styles.max_width_style,                              
     )
