@@ -3,7 +3,7 @@ import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.styles.styles import Size as size
 from arsenal_de_odio_web.styles.styles import Size, Color
 
-def button_integrantes(image: str, nombre: str, url: str) -> rx.Component:
+def button_integrantes(image: str, nombre: str) -> rx.Component:
     return rx.box(
         rx.avatar(#TODO No se si ponerle un avatar o la imagen 
             name=nombre,
@@ -22,13 +22,13 @@ def button_integrantes(image: str, nombre: str, url: str) -> rx.Component:
                 font_size=size.LARGE.value,
             ),    
         ),
-        rx.center(#! ERROR LOGICO
-            rx.link(#TODO Me dirige a la misma pagina de arsenal y no a la pagina de facebook     
-                rx.text(
-                    nombre
-                ),
-                href=url,
-                is_external=True
-            ),   
-        ),
+        # rx.center(#! ERROR LOGICO
+        #     rx.link(#TODO Me dirige a la misma pagina de arsenal y no a la pagina de facebook     
+        #         rx.text(
+        #             nombre
+        #         ),
+        #         href=url,
+        #         is_external=True
+        #     ),   
+        # ),
     )

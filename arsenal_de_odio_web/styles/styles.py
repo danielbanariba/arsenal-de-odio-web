@@ -42,9 +42,10 @@ BASE_STYLE = {
     rx.Link: {# Desaparece el subrayado de los links
         "text_decoration": "none",
         "_hover": {
-            "color": TextColor.AMARILLO.value,
+            "color": TextColor.SECONDARY.value,
         },
     }
+    
 }
 
 FONDO_BACKGROUND_PRIMARIO = {

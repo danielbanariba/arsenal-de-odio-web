@@ -8,34 +8,25 @@ from arsenal_de_odio_web.views.video import video
 from arsenal_de_odio_web.views.header import header
 from arsenal_de_odio_web.views.footer import footer
 from arsenal_de_odio_web.views.integrantes import integrantes
+from arsenal_de_odio_web.views.inicio import inicio
 
 combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
     return rx.box(
-        navbar(),
         rx.center(
             rx.vstack(
+                navbar(),
+                inicio(),
                 header(),
                 mercaderia(),
+                video(),
                 integrantes(),
                 footer(),
                 width="100%",
                 spacing=Size.BIG.value,
             )
         )
-        
-        # rx.center(
-        #     rx.vstack(
-        #         rx.video(
-        #             url="https://www.youtube.com/watch?v=0ikIVI6oLNI",
-        #             width="auto",
-        #             height="auto",
-        #         ),
-        #         width="100%",
-        #     ),  
-        # ),
-        #rx.html('<video autoplay muted loop> <source src="arsenal_video.mp4" type="video/mp4"> Your browser does not support the video tag.</video>')
     )
 
 app = rx.App(

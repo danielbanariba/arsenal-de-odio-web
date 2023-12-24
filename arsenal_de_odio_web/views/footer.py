@@ -9,11 +9,12 @@ def footer() -> rx.Component:
             rx.box(
                 rx.span(
                     """DANIEL\nBANARIBA""",
-                    style=styles.logo_canal
+                    style=styles.logo_canal,
                 ),
             ),
             #href="www.danibanariba.com", # ! Cuando tenga lista mi pagina web oficial, ponerla aqui la url
             is_external=True,
+            _hover={"color": "#ffc435"},
             font_size="0.9em",
         ),
         rx.span(

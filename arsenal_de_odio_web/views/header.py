@@ -1,16 +1,21 @@
 import reflex as rx 
-from arsenal_de_odio_web.styles.styles import Size, Color
+from arsenal_de_odio_web.styles.styles import MAX_WIDTH, Size, Color
 #from arsenal_de_odio_web.components.link_icons import link_icon, link
 import arsenal_de_odio_web.url as url
 import arsenal_de_odio_web.styles.styles as styles
+from arsenal_de_odio_web.components.icons import icon
 
 def header() -> rx.Component:
     return rx.vstack(
-        rx.heading(
-                "MUERTE EN EL MOSH",
-               size="lg",
-               padding_bottom=Size.DEFAULT.value,
+        rx.center(
+            rx.text(
+                "MUSICA",    
             ),
+            font_size=Size.VERY_BIG.value,
+            color = Color.SECONDARY.value,
+            padding_bottom=Size.ZERO.value,
+            padding_top=Size.VERY_SMALL.value,
+        ),
         rx.flex(
             rx.image(
                 src="img/portada.jpg",
@@ -28,21 +33,20 @@ def header() -> rx.Component:
                 rx.span(
                     "Y aqui va a ir la lista de canciones del disco"
                 ),
-                rx.link(
-                    "Escucha el disco!",
-                    rx.image(
-                        src="icons/spotify.svg",
-                        alt="Logo de Spotify",
-                        width=Size.DEFAULT.value,
-                        height=Size.DEFAULT.value,
+                rx.box(#TODO no me da al poner el icono de spotify, mas grande  
+                    icon(
+                        url.SPOTIFY,
+                        "spotify",
                     ),
-                    href=url.SPOTIFY,
-                     is_external=True
+                    _hover={"color": "#ffc435"},
                 ),
-                align_items="start", # Hace todo el texto para la izquierda
+                align_items="start",# Hace todo el texto para la izquierda
+                margin_left=Size.DEFAULT.value,
             ),
             flex_direction=["column", "column", "column", "row", "row"], #Responsive
         ),
-        padding_top=Size.VERY_BIG.value,
-        style=styles.max_width_style,                              
+        padding_top=Size.VERY_SMALL.value,
+        padding_x=Size.BIG.value,
+        width="100%",
+        max_width=MAX_WIDTH,                       
     )
