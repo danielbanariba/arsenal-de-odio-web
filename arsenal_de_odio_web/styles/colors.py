@@ -1,12 +1,10 @@
-# TODO Modificar los colores de la pagina segun sea necesaria 
-
 from enum import Enum
 
-# Definir bien los colores de la pagina
 class Color(Enum):
-    ACCENT = "#EA5940" # ? Hacer que las cosas se vean mal?
+    ACCENT = "#EA5940"
     PRIMARY = "#cb2c1d"
     SECONDARY = "#ffc435"
+    LOGO_CANAL = "f2f2f2"
         
 class TextColor(Enum):
     ACCENT = "#EA5940"

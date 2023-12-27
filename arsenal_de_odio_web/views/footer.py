@@ -1,5 +1,6 @@
 import reflex as rx 
 import datetime
+import arsenal_de_odio_web.url as URL
 import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.styles.styles import Size, Color, TextColor
 
@@ -12,10 +13,10 @@ def footer() -> rx.Component:
                     style=styles.logo_canal,
                 ),
             ),
-            #href="www.danibanariba.com", # ! Cuando tenga lista mi pagina web oficial, ponerla aqui la url
+            href=URL.DANIEL_BANARIBA,
             is_external=True,
             _hover={"color": "#ffc435"},
-            font_size="0.9em",
+            alt="Logotipo de DanielBanariba.",
         ),
         rx.span(
             rx.span(

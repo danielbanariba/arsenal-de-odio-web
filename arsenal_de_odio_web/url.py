@@ -5,6 +5,9 @@ BANDCAMP = "https://arsenaldeodio.bandcamp.com/album/muerte-en-el-mosh"
 
 # PLATAFORMAS 
 SPOTIFY = "https://open.spotify.com/intl-es/album/4sk89SFlS5mj7lapuRBWhZ"
+YOUTUBE_MUSIC = "https://music.youtube.com/playlist?list=OLAK5uy_lt53N2JVakbL4KUSDYQ8IE39vRGB8x8RQ"
+APPLE_MUSIC = "https://music.apple.com/hn/album/muerte-en-el-mosh/1688121677"
+DEEZER = "https://www.deezer.com/mx/album/441172137"
 
 # INTEGRANTES - FACEBOOK
 GUITARRISTA_PRINCIPAL_FACEBOOK = "https://www.facebook.com/emersonmustain.guevara"
@@ -41,5 +44,9 @@ BAJISTA_TIKTOK = ""
 BATERISTA_TIKTOK = ""
 GUITARRISTA_SECUNDARIO_TIKTOK = ""
 
+# WHATSAPP
+WHATSAPP = "https://wa.me/50433245827" #TODO cambiar el numero para el que venda
+
+DANIEL_BANARIBA = "https://www.danielbanariba.com" 
 
 HOME = "/"

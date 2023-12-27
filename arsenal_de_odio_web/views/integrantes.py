@@ -3,6 +3,8 @@ import arsenal_de_odio_web.styles.styles as styles
 import arsenal_de_odio_web.url as URL
 from arsenal_de_odio_web.components.link_integrantes import button_integrantes
 from arsenal_de_odio_web.components.icons import icon
+from arsenal_de_odio_web.styles.styles import Size, Color
+import arsenal_de_odio_web.styles.const as view
 
 def integrantes() -> rx.Component:
     return rx.center(
@@ -12,14 +14,23 @@ def integrantes() -> rx.Component:
                     "integrantes/9.jpg",
                     "Emerson Guevara",
                 ),
-                rx.center(
-                    icon(
-                        URL.GUITARRISTA_PRINCIPAL_FACEBOOK,
-                        "facebook"
-                    ),
-                    icon(
-                        URL.GUITARRISTA_PRINCIPAL_YOUTUBE,
-                        "tiktok"
+                rx.center(# da un espacio entro los iconos
+                    rx.hstack(
+                        icon(
+                            URL.GUITARRISTA_PRINCIPAL_FACEBOOK,
+                            "facebook",
+                            Size.BIG.value,
+                            Color.SECONDARY.value,
+                            view.viewBox_0
+                        ),
+                        icon(
+                            URL.GUITARRISTA_PRINCIPAL_YOUTUBE,
+                            "tiktok",
+                            Size.BIG.value,
+                            Color.SECONDARY.value,
+                            view.viewBox_0
+                        ),
+                        spacing=Size.SMALL.value,    
                     ),
                 ),
             ),
@@ -31,7 +42,10 @@ def integrantes() -> rx.Component:
                 rx.center(
                     icon(
                         URL.VOCALISTA_FACEBOOK,
-                        "facebook"
+                        "facebook",
+                        Size.BIG.value,
+                        Color.SECONDARY.value,
+                        view.viewBox_0
                     ),
                 ),
             ),
@@ -43,7 +57,10 @@ def integrantes() -> rx.Component:
                 rx.center(
                     icon(
                         URL.BATERISTA_FACEBOOK,
-                        "facebook"
+                        "facebook",
+                        Size.BIG.value,
+                        Color.SECONDARY.value,
+                        view.viewBox_0
                     ),
                 ),
             ),
@@ -55,7 +72,10 @@ def integrantes() -> rx.Component:
                 rx.center(
                     icon(
                         URL.BAJISTA_FACEBOOK,
-                        "facebook"
+                        "facebook",
+                        Size.BIG.value,
+                        Color.SECONDARY.value,
+                        view.viewBox_0
                     ),
                 ), 
             ),
@@ -65,9 +85,11 @@ def integrantes() -> rx.Component:
                     "Marco Rodriguez",
                 ),
                 rx.center(
-                    icon(
-                        URL.GUITARRISTA_SECUNDARIO_FACEBOOK,
-                        "facebook"
+                    icon(URL.GUITARRISTA_SECUNDARIO_FACEBOOK,
+                        "facebook",
+                        Size.BIG.value,
+                        Color.SECONDARY.value,
+                        view.viewBox_0
                     ),
                 ),
             ),

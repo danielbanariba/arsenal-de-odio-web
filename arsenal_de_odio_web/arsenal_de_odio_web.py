@@ -17,10 +17,15 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 navbar(),
-                inicio(),
-                header(),
+                rx.center(
+                    rx.vstack(
+                        #inicio(),
+                        header(),
+                        max_width=styles.MAX_WIDTH,
+                    ),
+                ),
                 mercaderia(),
-                video(),
+                #video(),
                 integrantes(),
                 footer(),
                 width="100%",

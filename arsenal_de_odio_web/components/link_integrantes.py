@@ -15,6 +15,7 @@ def button_integrantes(image: str, nombre: str) -> rx.Component:
             border_color=Color.SECONDARY.value,
             margin_right=size.SMALL.value,
             margin_left=size.SMALL.value,
+            box_shadow = "7px 7px 10px rgba(0, 0, 0, 0.9)"#sombra
         ),
         rx.center( 
             rx.text(
@@ -22,13 +23,4 @@ def button_integrantes(image: str, nombre: str) -> rx.Component:
                 font_size=size.LARGE.value,
             ),    
         ),
-        # rx.center(#! ERROR LOGICO
-        #     rx.link(#TODO Me dirige a la misma pagina de arsenal y no a la pagina de facebook     
-        #         rx.text(
-        #             nombre
-        #         ),
-        #         href=url,
-        #         is_external=True
-        #     ),   
-        # ),
     )
