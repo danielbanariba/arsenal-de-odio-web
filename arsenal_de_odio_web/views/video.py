@@ -9,7 +9,14 @@ def video() -> rx.Component:
                     <style>
                         #title-container {
                             position: relative;
-                            width: 100%;
+                            width: 100vw;
+                        }
+                        #title-container h1 { 
+                            background-color: rgba(0, 0, 0, .7);
+                            font-size: 10vw;
+                            text-align: center;
+                            font-weight: 400;
+                            mix-blend-mode: multiply;        
                         }
                         #background-video {
                             position: absolute;
@@ -20,19 +27,12 @@ def video() -> rx.Component:
                             object-fit: cover;
                             z-index: -1;
                         }
-                        h1 { 
-                            background-color: rgba(0, 0, 0, 0.7);  /* Añade transparencia al fondo del título */
-                            font-size: 10vw;
-                            text-align: center;
-                            font-weight: 400;
-                            mix-blend-mode: multiply;        
-                        }
                     </style>
                     <div id="title-container">
                         <video id="background-video" autoplay muted preload loop>
                             <source src="video/arsenal_video.mp4" type="video/mp4">
                         </video>
-                        <h1>🍻MUY PRONTO🍺</h1>
+                        <h1>MUY PRONTO</h1>
                     </div>
                 '''
             ),

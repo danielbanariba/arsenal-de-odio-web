@@ -5,16 +5,27 @@ import arsenal_de_odio_web.styles.styles as styles
 def inicio() -> rx.Component:
     return rx.vstack(#TODO estoy en duda si poner el inicio, es que no se xd 
         rx.hstack(
-            rx.audio(
-            url="audio/hey_stoj.mp3",
-            width="400px",
-            height="auto",
-            ),
+            rx.html(#Hace que la imagen no se pueda ni hacerse zoom ni moverse
+                '''
+                    <style>
+                        #image-container {
+                            position: relative;
+                            width: 100vw;
+                            height: 100vh;
+                        }
+                        #background-image {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            z-index: -1;
+                        }
+                    </style>
+                    <div id="image-container">
+                        <img id="background-image" src="img/arsenal_portada.jpg" alt="Background Image">
+                    </div>
+                ''')
         ),
-        bg_img="img/arsenal_portada.jpg",
-        bg_position = "top",
-        bg_repeat = "no-repeat",
-        bg_attachment = "scroll", #TODO estoy indeciso si dejarlo asi o poner el fixed 
-        bg_size = "cover",
-        width="100%",
     )

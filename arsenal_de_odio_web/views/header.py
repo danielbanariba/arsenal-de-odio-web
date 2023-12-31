@@ -5,6 +5,8 @@ import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.components.icons import icon
 import arsenal_de_odio_web.styles.const as view
 from arsenal_de_odio_web.components.spotify import reproductor_spotify
+from arsenal_de_odio_web.effects.background_noise import background_noise
+from arsenal_de_odio_web.components.list_song import list_song
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -29,19 +31,7 @@ def header() -> rx.Component:
                 ),  
             ),
             rx.vstack(
-                rx.box(
-                    rx.span(
-                    "Aqui va a ir una descripcion del album de la banda, y todo lo que se va a tratar del disco"
-                    ),
-                    rx.span(
-                        "Mas detalles del disco como el año de lanzamiento, el genero, etc."
-                    ),
-                    rx.span(
-                        "Y aqui va a ir la lista de canciones del disco"
-                    ),
-                    align_items="start",# Hace todo el texto para la izquierda
-                    margin_left=Size.DEFAULT.value,
-                ),
+                list_song(),
                 rx.center(
                     rx.hstack(
                         icon(url.SPOTIFY, "spotify", Size.PLATAFORMAS.value, Color.SECONDARY.value, view.viewBox_0),

@@ -9,6 +9,7 @@ from arsenal_de_odio_web.views.header import header
 from arsenal_de_odio_web.views.footer import footer
 from arsenal_de_odio_web.views.integrantes import integrantes
 from arsenal_de_odio_web.views.inicio import inicio
+from arsenal_de_odio_web.effects.background_noise import background_noise
 
 combined_style = {**styles.BASE_STYLE}
 
@@ -17,15 +18,18 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 navbar(),
+                # rx.vstack(
+                #     background_noise(),    
+                # ),
                 rx.center(
                     rx.vstack(
-                        #inicio(),
+                        inicio(),
                         header(),
                         max_width=styles.MAX_WIDTH,
                     ),
                 ),
                 mercaderia(),
-                #video(),
+                video(),
                 integrantes(),
                 footer(),
                 width="100%",
