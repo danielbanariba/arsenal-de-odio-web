@@ -3,7 +3,6 @@ import datetime
 import arsenal_de_odio_web.url as URL
 import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.styles.styles import Size, Color, TextColor
-from arsenal_de_odio_web.effects.background_noise import background_noise
 
 def footer() -> rx.Component:
     return rx.vstack(

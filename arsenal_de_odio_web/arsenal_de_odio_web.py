@@ -1,24 +1,23 @@
 import reflex as rx 
 import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.styles.styles import FONDO_BACKGROUND_PRIMARIO
+from arsenal_de_odio_web.styles.styles import Size
 from arsenal_de_odio_web.views.mercaderia import mercaderia
 from arsenal_de_odio_web.views.navbar import navbar
-from arsenal_de_odio_web.styles.styles import Size
 from arsenal_de_odio_web.views.video import video
 from arsenal_de_odio_web.views.header import header
 from arsenal_de_odio_web.views.footer import footer
 from arsenal_de_odio_web.views.integrantes import integrantes
 from arsenal_de_odio_web.views.inicio import inicio
-from arsenal_de_odio_web.effects.background_noise import background_noise
+from arsenal_de_odio_web.views.grain import grain
+from arsenal_de_odio_web.views.hada import hada
 
 combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
     return rx.vstack(
+                hada(),
                 navbar(),
-                # rx.vstack(
-                #     background_noise(),    
-                # ),
                 rx.center(
                     rx.vstack(
                         inicio(),
@@ -30,6 +29,7 @@ def index() -> rx.Component:
                 video(),
                 integrantes(),
                 footer(),
+                grain(),
                 width="100%",
                 spacing=Size.BIG.value,
             )

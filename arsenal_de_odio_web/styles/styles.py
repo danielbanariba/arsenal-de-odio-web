@@ -28,6 +28,7 @@ STYLESHEETS = [
     "fonts/fonts.css", # Ir al archvivo fonts.py para ver las fuentes
     # TODO hacer una animacion con la imagen del hada de las birrias, Link de la pagina: https://animejs.com/documentation/#functionBasedPropVal 
     # TODO Y las funciones que mas me gustaron fueron: FUNCTION BASED VALUES
+    "styles/grain.css",
 ]
 
 BASE_STYLE = {

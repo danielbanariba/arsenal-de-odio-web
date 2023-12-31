@@ -5,7 +5,6 @@ import arsenal_de_odio_web.styles.styles as styles
 from arsenal_de_odio_web.components.icons import icon
 import arsenal_de_odio_web.styles.const as view
 from arsenal_de_odio_web.components.spotify import reproductor_spotify
-from arsenal_de_odio_web.effects.background_noise import background_noise
 from arsenal_de_odio_web.components.list_song import list_song
 
 def header() -> rx.Component:
@@ -51,7 +50,8 @@ def header() -> rx.Component:
     ),
     rx.vstack(
         rx.spacer(),
-        reproductor_spotify(),  
+        reproductor_spotify(),
+        #rx.script(src="js/spotify.js"),
     ),
     align_items="center",
     )
