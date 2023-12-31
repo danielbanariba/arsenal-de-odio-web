@@ -50,10 +50,8 @@ def header() -> rx.Component:
         max_width=MAX_WIDTH,                       
     ),
     rx.vstack(
-        rx.text(
-            "Escucha el disco!"
-        ),
+        rx.spacer(),
         reproductor_spotify(),  
-        ),
-    align_items="start",
+    ),
+    align_items="center",
     )

@@ -81,7 +81,7 @@ def navbar() -> rx.Component:
     padding_y=Size.VERY_SMALL.value,
     padding_top=Size.ZERO.value,
     # ? estoy en duda si fija la barrar de navegacion o no
-    # z_index="999",
+    z_index="999",
     # top="0",
     width="100%",
 )

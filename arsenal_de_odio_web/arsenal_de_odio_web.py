@@ -14,9 +14,7 @@ from arsenal_de_odio_web.effects.background_noise import background_noise
 combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
-    return rx.box(
-        rx.center(
-            rx.vstack(
+    return rx.vstack(
                 navbar(),
                 # rx.vstack(
                 #     background_noise(),    
@@ -35,8 +33,7 @@ def index() -> rx.Component:
                 width="100%",
                 spacing=Size.BIG.value,
             )
-        )
-    )
+        
 
 app = rx.App(
     stylesheets=styles.STYLESHEETS, # Carga las hojas de estilos
