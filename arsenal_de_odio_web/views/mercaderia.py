@@ -13,27 +13,15 @@ def mercaderia() -> rx.Component:
             font_size=Size.VERY_BIG.value,
             color = Color.SECONDARY.value,
         ),
-        rx.hstack(
-            rx.flex(
-                rx.center(
-                    producto(
-                        imagen="img/camisa_ejemplo.png",
-                        descripcion="CAMISA OFICAL DE ARSENAL DE ODIO",
-                        precio="L. 450.00",
-                    ),
-                    margin_top=Size.BIG.value,
-                    margin_bottom=Size.BIG.value,
-                ),
-                rx.spacer(),
-                rx.center(
-                    producto(
-                        imagen="img/cd.png",
-                        descripcion="CD OFICIAL DE ARSENAL DE ODIO - MUERTE EN EL MOSH",
-                        precio="L. 200.00",
-                    ),
-                ),
-                width="100%",
+        rx.center(
+            rx.responsive_grid(
+                producto("img/merch/camisa_ejemplo2.png", "CAMISA DE LA HADA DE LAS BIRRIAS", "L. 500.00"),
+                producto("img/merch/cd2.png", "CD - MUERTE EN EL MOSH", "L. 450.00"),
+                columns=[1, 2],
+                spacing="6",
             ),
+            width="100%",
+            padding=Size.BIG.value,
         ),
         bg_img="img/arsenal_blanc_negro.jpg",
         bg_position = "top",

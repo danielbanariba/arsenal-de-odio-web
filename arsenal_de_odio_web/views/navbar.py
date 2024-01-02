@@ -9,66 +9,99 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
             rx.center(
-                link(
-                    url.BANDCAMP, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
-                    "MUSICA",
-                    "right"
-                    ),
-                link(
-                    url.FACEBOOK,
-                    "VIDEOS",
-                    "right"  
+                rx.desktop_only(
+                    rx.hstack(
+                        link(
+                            url.BANDCAMP, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
+                            "MUSICA",
+                            "right",
+                        ),
+                        link(
+                            url.FACEBOOK,
+                            "VIDEOS",
+                            "right"  
+                        ),
+                        link(
+                            url.INSTAGRAM,
+                            "HISTORIA",
+                            "right",
+                        ),    
+                    ),    
                 ),
-                link(
-                    url.INSTAGRAM,
-                    "HISTORIA",
-                    "right"
-                ),
-            rx.image(# TODO poner una url que al hacerle click al logo me lleve al inicio de la pagina 
+            rx.image(
                 src="logo_arsenal.png", 
                 alt="Logo de la banda Arsenal de Odio", 
                 margin_top=Size.VERY_SMALL.value,
                 justify_content="center",
-                width="14%", 
-                height="14%"
+                width="310px",  
+                height="153px",
             ),
+                rx.desktop_only(
+                        rx.hstack(
+                            link(
+                                url.FACEBOOK,
+                                "FACEBOOK",
+                                "left",
+                            ),
+                            link(
+                                url.INSTAGRAM,
+                                "INSTAGRAM",
+                                "left",
+                            ),  
+                        ),    
+                    ),
             rx.hstack(
-                rx.tablet_and_desktop(
-                    link(
-                        url.FACEBOOK,
-                        "FACEBOOK",
-                        "left",
+                rx.tablet_only(
+                    rx.hstack(
+                        link(
+                            url.BANDCAMP, 
+                            "MUSICA",
+                            "right",
+                        ),
+                        link(
+                            url.FACEBOOK,
+                            "VIDEOS",
+                            "right"  
+                        ),
+                        link(
+                            url.INSTAGRAM,
+                            "HISTORIA",
+                            "right",
+                        ),  
+                        link(
+                            url.FACEBOOK,
+                            "FACEBOOK",
+                            "left",
+                        ),
+                        link(
+                            url.INSTAGRAM,
+                            "INSTAGRAM",
+                            "left",
+                        ),  
                     ),
                 ),
                 rx.center(
                     rx.mobile_only(
-                        icon(
-                            url.FACEBOOK,
-                            "facebook_navbar",
-                            Size.BIG.value,
-                            Color.PRIMARY.value,
-                            "0 0 512 512"
+                        rx.hstack(
+                            icon(
+                                url.FACEBOOK,
+                                "facebook_navbar",
+                                Size.BIG.value,
+                                Color.PRIMARY.value,
+                                "0 0 512 512"
+                            ),
+                            icon(
+                                url.INSTAGRAM,
+                                "instagram_navbar",
+                                Size.BIG.value,
+                                Color.PRIMARY.value,
+                                "0 0 512 512"
+                            ),
                         ),
                     ), 
                 ),
             ),
-            rx.hstack(
-                link(
-                    url.INSTAGRAM,
-                    "INSTAGRAM",
-                    "left",
-                ),
-                rx.center(
-                    icon(
-                        url.INSTAGRAM,
-                        "instagram",
-                        Size.BIG.value,
-                        Color.PRIMARY.value,
-                        "0 0 512 512"
-                        ),
-                    ),        
-            ),
-            flex_direction=["column", "column", "row", "row", "row"], #TODO Responsive, cambiar los  nombres, por iconos al detectar que se trata de un dispositivo movil 
+            flex_direction=["column", "column", "column", "row", "row"], #TODO Responsive, cambiar los  nombres, por iconos al detectar que se trata de un dispositivo movil 
             #?ENCONTRE UNA POISBLE SOLUCION AQUI https://youtu.be/h8Tn0ITRoQs?si=TEXvWLFatM8urvGf&t=7046
             #rx.mobie_only()
             width="100%",

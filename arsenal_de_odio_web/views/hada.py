@@ -1,45 +1,52 @@
 import reflex as rx
+from arsenal_de_odio_web.styles.styles import MAX_WIDTH, Size, Color
 
 def hada () -> rx.Component:
-    return rx.html(
+    return rx.box(
+        rx.html(
         '''
             <head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
                 <style>
-                    @keyframes shakeAndScale {
-                        0% { transform: translate(1px, 1px) rotate(0deg) scale(1); }
-                        10% { transform: translate(-1px, -2px) rotate(-1deg) scale(1.05); }
-                        20% { transform: translate(-3px, 0px) rotate(1deg) scale(1.1); }
-                        30% { transform: translate(3px, 2px) rotate(0deg) scale(1.15); }
-                        40% { transform: translate(1px, -1px) rotate(1deg) scale(1.2); }
-                        50% { transform: translate(-1px, 2px) rotate(-1deg) scale(1.5); }
-                        60% { transform: translate(-3px, 1px) rotate(0deg) scale(1.2); }
-                        70% { transform: translate(3px, 1px) rotate(-1deg) scale(1.15); }
-                        80% { transform: translate(-1px, -1px) rotate(1deg) scale(1.1); }
-                        90% { transform: translate(1px, 2px) rotate(0deg) scale(1.05); }
-                        100% { transform: translate(1px, -2px) rotate(-1deg) scale(1); }
+                    @keyframes shakeXY {
+                        0% { transform: translate(0, 0) rotate(0); }
+                        20% { transform: translate(-30px, 0) rotate(-8deg); }
+                        40% { transform: translate(30px, 0) rotate(8deg); }
+                        60% { transform: translate(-30px, 0) rotate(-8deg); }
+                        80% { transform: translate(30px, 0) rotate(8deg); }
+                        100% { transform: translate(0, 0) rotate(0); }
+                    }
+
+                    @keyframes heartBeat {
+                        0% { transform: scale(1); }
+                        14% { transform: scale(1.3); }
+                        28% { transform: scale(1); }
+                        42% { transform: scale(1.3); }
+                        70% { transform: scale(1); }
+                    }
+                    
+                    #myImageContainer {
+                        overflow: hidden;
                     }
 
                     #myImage {
-                        position: absolute;
-                        width: 5%;
-                        height: 5%;
-                        transition: top 2s ease-in-out, left 2s ease-in-out; /* Agregar transición */
-                        animation: shakeAndScale 2s infinite; /* Agregar animación de temblor y escala */
+                        height: auto;
+                        width: 100%;
+                        animation: shakeXY 1.5s infinite;
+                        overflow: hidden;
+                    }
+
+                    #myImage:hover {
+                        animation: shakeXY 2s infinite, heartBeat 1s infinite;
                     }
                 </style>
             </head>
             <body>
-                <img id="myImage" src="img/el_hada_de_las_birrias.png" alt="My Image">
-                <script>
-                    function moveImage() {
-                        var img = document.getElementById('myImage');
-                        var x = Math.floor(Math.random() * window.innerWidth);
-                        var y = Math.floor(Math.random() * window.innerHeight);
-                        img.style.left = x + 'px';
-                        img.style.top = y + 'px';
-                    }
-                    setInterval(moveImage, 2000); // Mueve la imagen cada 2 segundos
-                </script>
+                <div id="myImageContainer">
+                    <img id="myImage" class="animate__animated animate__pulse animate__infinite" src="img/el_hada_de_las_birrias.png" alt="My Image">
+                </div>
             </body>
         '''
+        ),
+        center_content=True, 
     )

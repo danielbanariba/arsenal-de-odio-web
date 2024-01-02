@@ -5,11 +5,10 @@ from arsenal_de_odio_web.styles.styles import Size, Color
 
 def button_integrantes(image: str, nombre: str) -> rx.Component:
     return rx.box(
-        rx.avatar(#TODO No se si ponerle un avatar o la imagen 
+        rx.avatar(
             name=nombre,
             src=image,
             size="2xl",
-            # TODO hacer varias combinaciones de colores hasta que empiece a quedar bien,
             bg=Color.PRIMARY.value, # ? Fondo del avatar
             border="4px",
             border_color=Color.SECONDARY.value,

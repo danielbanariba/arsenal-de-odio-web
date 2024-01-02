@@ -79,14 +79,9 @@ max_width_style = dict(
     max_width=MAX_WIDTH,
 )
 
-#TODO usar en las miniaturas de los productos
 producto_style = dict(
-    width="500px", 
-    height="500px",
-    object_fit="contain",
-    margin="auto",
     _hover={
         "transform": "scale(1.1) rotate(10deg)",
         "transition": "transform 0.2s",
     },
-)
+),

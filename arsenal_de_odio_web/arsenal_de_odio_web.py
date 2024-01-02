@@ -11,12 +11,15 @@ from arsenal_de_odio_web.views.integrantes import integrantes
 from arsenal_de_odio_web.views.inicio import inicio
 from arsenal_de_odio_web.views.grain import grain
 from arsenal_de_odio_web.views.hada import hada
+from arsenal_de_odio_web.views.hada_moved import hada_moved
+from arsenal_de_odio_web.views.navbarv2 import navbarv2
 
 combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
     return rx.vstack(
-                hada(),
+                hada_moved(),
+                navbarv2(),
                 navbar(),
                 rx.center(
                     rx.vstack(
@@ -25,6 +28,7 @@ def index() -> rx.Component:
                         max_width=styles.MAX_WIDTH,
                     ),
                 ),
+                hada(),
                 mercaderia(),
                 video(),
                 integrantes(),

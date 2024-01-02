@@ -2,7 +2,7 @@ import reflex as rx
 from arsenal_de_odio_web.styles.styles import Size 
 
 def video() -> rx.Component:
-    return rx.vstack(#TODO hacer que el video vaya de punta apunta en la pantalla
+    return rx.vstack(
         rx.hstack(
             rx.html(
                 '''

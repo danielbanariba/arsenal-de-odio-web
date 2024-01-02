@@ -8,8 +8,8 @@ import arsenal_de_odio_web.styles.const as view
 
 def integrantes() -> rx.Component:
     return rx.vstack(
-        rx.wrap(# responsive, apila cada uno encima del otro cuando detecta que la pantalla es pequeña
-            rx.wrap_item(
+        rx.center(# responsive, apila cada uno encima del otro cuando detecta que la pantalla es pequeña
+            rx.responsive_grid(
                 rx.box(
                     button_integrantes(
                         "integrantes/9.jpg",
@@ -35,8 +35,6 @@ def integrantes() -> rx.Component:
                         ),
                     ),
                 ),
-            ),
-            rx.wrap_item(
                 rx.box(
                     button_integrantes(
                         "integrantes/8.jpg",
@@ -52,8 +50,6 @@ def integrantes() -> rx.Component:
                         ),
                     ),
                 ),    
-            ),
-            rx.wrap_item(
                 rx.box(
                     button_integrantes(
                         "integrantes/10.jpg",
@@ -69,8 +65,6 @@ def integrantes() -> rx.Component:
                         ),
                     ),
                 ),
-            ),
-            rx.wrap_item(
                 rx.box(
                     button_integrantes(
                         "integrantes/11.jpg",
@@ -86,8 +80,6 @@ def integrantes() -> rx.Component:
                         ),
                     ), 
                 ),    
-            ),
-            rx.wrap_item(
                 rx.box(
                     button_integrantes(
                         "integrantes/12.jpg",
@@ -101,10 +93,10 @@ def integrantes() -> rx.Component:
                             view.viewBox_0
                         ),
                     ),
-                ),    
-            ),
-            width="100%",
-            spacing="2em",
-            align="center",
+                ),
+            columns=[1, 2, 3, 4, 5],
+            spacing="6",
         ),
-    )
+    ),
+    width="100%",
+)

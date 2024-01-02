@@ -5,7 +5,7 @@ import arsenal_de_odio_web.styles.styles as styles
 def inicio() -> rx.Component:
     return rx.vstack(#TODO estoy en duda si poner el inicio, es que no se xd 
         rx.hstack(
-            rx.html(#Hace que la imagen no se pueda ni hacerse zoom ni moverse
+            rx.html(#La imagen no se pueda ni hacer zoom ni moverse
                 '''
                     <style>
                         #image-container {

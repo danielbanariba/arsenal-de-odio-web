@@ -1,32 +1,22 @@
 import reflex as rx
-from arsenal_de_odio_web.styles.styles import Size, producto_style, Color
+from arsenal_de_odio_web.styles.styles import MAX_WIDTH, Size, Color, producto_style
 import arsenal_de_odio_web.url as URL
 
 def producto (imagen: str, descripcion: str, precio: str) -> rx.Component:
-    return rx.vstack(
-        rx.center(
-            rx.link(
-                rx.image(
-                    src=imagen,
-                    style=producto_style
-                ),
-                href=URL.WHATSAPP,
-                is_external=True,   
-            ),
+    return rx.card(
+        rx.image(#TODO poner el link del vendedor
+            src=imagen, 
+            _hover={
+                "transform": "scale(1.1) rotate(10deg)",
+                "transition": "transform 0.2s",
+            },
         ),
-        rx.center(
-            rx.text(
-                descripcion,
-                font_size=Size.VERY_BIG.value,
-            ),
+        header=rx.text(
+            descripcion, 
+            color=Color.PRIMARY.value, 
+            font_size=Size.BIG.value,
         ),
-        rx.center(
-            rx.text(
-                precio,
-                font_size=Size.LARGE.value,
-            ),
-        ),
-        color = Color.SECONDARY.value,
+        footer=rx.heading(precio, size="xl"),
+        align_items="center",
+        bg="rgba(38, 35, 53, 0.7)",
     )
-        
-        
