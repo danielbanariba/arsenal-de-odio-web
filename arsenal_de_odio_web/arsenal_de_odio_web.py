@@ -31,7 +31,7 @@ def index() -> rx.Component:
                 ),
                 hada(),
                 mercaderia(),
-                video(),
+                #video(),
                 integrantes(),
                 footer(),
                 grain(),
