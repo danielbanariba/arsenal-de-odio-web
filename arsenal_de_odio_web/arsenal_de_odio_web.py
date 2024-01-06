@@ -21,7 +21,7 @@ def index() -> rx.Component:
     return rx.vstack(
                 rx.script("document.documentElement.lang='es'"),
                 #hada_moved(),
-                #navbar(),
+                navbar(),
                 rx.center(
                     rx.vstack(
                         inicio(),
