@@ -1,17 +1,25 @@
 *.db
 
+
 *.py[cod]
 
-__pycache__/
-
-env
-
-node_modules/
-
-package-lock.json
-
-package.json
 
 .web
 
+
+__pycache__/
+
+
 build.sh
+
+
+env
+
+
+node_modules/
+
+
+package-lock.json
+
+
+package.json
