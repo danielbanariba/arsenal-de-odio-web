@@ -26,7 +26,7 @@ def index() -> rx.Component:
                     rx.vstack(
                         inicio(),
                         header(),
-                        reproductor_spotify(),
+                        #reproductor_spotify(),
                         max_width=styles.MAX_WIDTH,
                     ),
                 ),
