@@ -19,6 +19,7 @@ combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
     return rx.vstack(
+                rx.script("document.documentElement.lang='es'"),
                 #hada_moved(),
                 navbar(),
                 rx.center(
@@ -43,6 +44,17 @@ def index() -> rx.Component:
 app = rx.App(
     stylesheets=styles.STYLESHEETS, # Carga las hojas de estilos
     style=combined_style,
+    head_components=[
+        rx.script(src="https://www.googletagmanager.com/gtag/js?id=G-3YGHT3XJFS"),
+        rx.script(
+            """
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3YGHT3XJFS');
+            """
+        ),
+    ],
 )
 
 app.add_page(
