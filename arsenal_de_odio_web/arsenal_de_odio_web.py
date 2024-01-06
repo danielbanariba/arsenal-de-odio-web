@@ -13,7 +13,7 @@ from arsenal_de_odio_web.views.inicio import inicio
 from arsenal_de_odio_web.views.grain import grain
 from arsenal_de_odio_web.views.hada import hada
 from arsenal_de_odio_web.views.hada_moved import hada_moved
-# from arsenal_de_odio_web.components.spotify import reproductor_spotify
+from arsenal_de_odio_web.components.spotify import reproductor_spotify
 
 combined_style = {**styles.BASE_STYLE}
 
@@ -26,13 +26,13 @@ def index() -> rx.Component:
                     rx.vstack(
                         inicio(),
                         header(),
-                        #reproductor_spotify(),
+                        reproductor_spotify(),
                         max_width=styles.MAX_WIDTH,
                     ),
                 ),
                 hada(),
                 mercaderia(),
-                #video(),
+                video(),
                 integrantes(),
                 footer(),
                 grain(),
