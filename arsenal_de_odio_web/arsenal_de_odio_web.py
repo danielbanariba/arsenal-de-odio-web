@@ -4,7 +4,7 @@ from arsenal_de_odio_web.styles.styles import FONDO_BACKGROUND_PRIMARIO
 from arsenal_de_odio_web.styles.styles import Size
 from arsenal_de_odio_web.views.mercaderia import mercaderia
 from arsenal_de_odio_web.views.navbar import navbar
-from arsenal_de_odio_web.views.navbarv2 import navbarv2
+#from arsenal_de_odio_web.views.navbarv2 import navbarv2
 from arsenal_de_odio_web.views.video import video
 from arsenal_de_odio_web.views.header import header
 from arsenal_de_odio_web.views.footer import footer
@@ -21,7 +21,7 @@ def index() -> rx.Component:
     return rx.vstack(
                 rx.script("document.documentElement.lang='es'"),
                 #hada_moved(),
-                navbar(),
+                #navbar(),
                 rx.center(
                     rx.vstack(
                         inicio(),
