@@ -2,11 +2,11 @@
 
 *.py[cod]
 
-.web
+__pycache__/
 
 arsenal_video.mp4
 
-__pycache__/
+env
 
 node_modules/
 
@@ -14,4 +14,6 @@ package-lock.json
 
 package.json
 
-env
+.web
+
+build.sh

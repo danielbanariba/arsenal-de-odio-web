@@ -35,10 +35,11 @@ def hada () -> rx.Component:
                         animation: shakeXY 1.5s infinite;
                         overflow: hidden;
                     }
-
+                    /*
                     #myImage:hover {
                         animation: shakeXY 2s infinite, heartBeat 1s infinite;
                     }
+                    */
                 </style>
             </head>
             <body>

@@ -15,9 +15,13 @@ def mercaderia() -> rx.Component:
         ),
         rx.center(
             rx.responsive_grid(
-                producto("img/merch/camisa_ejemplo2.png", "CAMISA DE LA HADA DE LAS BIRRIAS", "L. 500.00"),
-                producto("img/merch/cd2.png", "CD - MUERTE EN EL MOSH", "L. 450.00"),
-                columns=[1, 2],
+                producto("img/merch/camisa_hada_de_las_birrias.png", 
+                         "CAMISA DEL HADA DE LAS BIRRIAS", 
+                         "L. 350.00"),
+                producto("img/merch/cd2.png", 
+                         "CD - MUERTE EN EL MOSH", 
+                         "L. 450.00"),
+                columns=[1, 1, 1, 2],#ALV, esto es oro para lo responsive
                 spacing="6",
             ),
             width="100%",
@@ -29,5 +33,5 @@ def mercaderia() -> rx.Component:
         bg_attachment = "scroll", #TODO estoy indeciso si dejarlo asi o poner el fixed 
         bg_size = "cover",
         width="100%",
-        # max_width=MAX_WIDTH, # quiero encerrar todo en la caja, pero no me deja xd 
+        id="mercaderia",
     )

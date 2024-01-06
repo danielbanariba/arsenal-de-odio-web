@@ -4,18 +4,18 @@ from arsenal_de_odio_web.styles.styles import Size
 
 def list_song() -> rx.Component:
     return rx.vstack(
+        # rx.box(
+        #     rx.span(
+        #         "Aqui va a ir una descripcion del album de la banda, y todo lo que se va a tratar del disco"
+        #     ),
+        #     rx.span(
+        #         "Mas detalles del disco como el año de lanzamiento, el genero, etc."
+        #     ),   
+        #     align_items="start",# Hace todo el texto para la izquierda
+        #     margin_left=Size.DEFAULT.value,
+        # ),
         rx.box(
-            rx.span(
-                "Aqui va a ir una descripcion del album de la banda, y todo lo que se va a tratar del disco"
-            ),
-            rx.span(
-                "Mas detalles del disco como el año de lanzamiento, el genero, etc."
-            ),   
-            align_items="start",# Hace todo el texto para la izquierda
-            margin_left=Size.DEFAULT.value,
-        ),
-        rx.container(
-            rx.box(
+            rx.vstack(
                 rx.spacer(),
                 rx.text("01. Cathrashers"),
                 rx.spacer(),
@@ -40,5 +40,5 @@ def list_song() -> rx.Component:
             center_content=True,
             text_align= "center",
             font_size = Size.LARGE.value,
-            ),
+        ),
     )

@@ -1,6 +1,6 @@
 import reflex as rx 
 from arsenal_de_odio_web.styles.styles import MAX_WIDTH , Size, Color
-from arsenal_de_odio_web.components.link_icons import link #link_icon,
+from arsenal_de_odio_web.components.link_icons import link, linkv2 #link_icon,
 import arsenal_de_odio_web.url as url
 from arsenal_de_odio_web.components.icons import iconv2
 
@@ -45,8 +45,8 @@ def navbarv2() -> rx.Component:
                     rx.drawer_body(
                         rx.box(#rx.drawer_body
                             rx.vstack(
-                                link(
-                                    url.BANDCAMP, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
+                                linkv2(
+                                    url.MUSICA, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
                                     "MUSICA",
                                     "right"
                                     ),
@@ -55,9 +55,9 @@ def navbarv2() -> rx.Component:
                                     "VIDEOS",
                                     "right"  
                                 ),
-                                link(
-                                    url.INSTAGRAM,
-                                    "HISTORIA",
+                                linkv2(
+                                    url.MERCADERIA,
+                                    "MERCADERIA",
                                     "right"
                                 ),    
                             ),
@@ -73,9 +73,7 @@ def navbarv2() -> rx.Component:
         ),
     ),
     position="sticky",
-    bg=Color.SECONDARY.value,
-    padding_x=Size.BIG.value, # El padding es el espacio que hay entre el borde y el texto
-    padding_y=Size.VERY_SMALL.value,
+    padding_x=Size.VERY_SMALL.value,
     padding_top=Size.ZERO.value,
     z_index="999",
     # top="0",

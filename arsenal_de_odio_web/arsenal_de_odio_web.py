@@ -4,6 +4,7 @@ from arsenal_de_odio_web.styles.styles import FONDO_BACKGROUND_PRIMARIO
 from arsenal_de_odio_web.styles.styles import Size
 from arsenal_de_odio_web.views.mercaderia import mercaderia
 from arsenal_de_odio_web.views.navbar import navbar
+from arsenal_de_odio_web.views.navbarv2 import navbarv2
 from arsenal_de_odio_web.views.video import video
 from arsenal_de_odio_web.views.header import header
 from arsenal_de_odio_web.views.footer import footer
@@ -12,19 +13,19 @@ from arsenal_de_odio_web.views.inicio import inicio
 from arsenal_de_odio_web.views.grain import grain
 from arsenal_de_odio_web.views.hada import hada
 from arsenal_de_odio_web.views.hada_moved import hada_moved
-from arsenal_de_odio_web.views.navbarv2 import navbarv2
+from arsenal_de_odio_web.components.spotify import reproductor_spotify
 
 combined_style = {**styles.BASE_STYLE}
 
 def index() -> rx.Component:
     return rx.vstack(
-                hada_moved(),
-                navbarv2(),
+                #hada_moved(),
                 navbar(),
                 rx.center(
                     rx.vstack(
                         inicio(),
                         header(),
+                        reproductor_spotify(),
                         max_width=styles.MAX_WIDTH,
                     ),
                 ),
@@ -47,7 +48,7 @@ app = rx.App(
 app.add_page(
     index,
     title="Arsenal de Odio",
-    description="Arsenal de Odio es una banda de trash metal de la ciudad de tegucigalpa, Honduras.",
+    description="Arsenal de Odio es una banda de Trash Metal de la ciudad de Tegucigalpa, Honduras.",
 )
 
 app.compile()

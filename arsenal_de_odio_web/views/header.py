@@ -27,7 +27,8 @@ def header() -> rx.Component:
                     width="100%", #16em
                     heigh="100%",
                     box_shadow = "7px 7px 10px rgba(0, 0, 0, 0.9)"#sombra
-                ),  
+                ),
+                padding_bottom=Size.BIG.value,
             ),
             rx.vstack(
                 list_song(),
@@ -39,6 +40,7 @@ def header() -> rx.Component:
                         icon(url.DEEZER, "deezer", Size.PLATAFORMAS.value, Color.SECONDARY.value, view.viewBox),  
                     ),
                 ),
+                padding_x=Size.VERY_BIG.value,
             ),
             align_items="center",
             flex_direction=["column", "column", "column", "row", "row"], #Responsive
@@ -46,12 +48,13 @@ def header() -> rx.Component:
         padding_top=Size.VERY_SMALL.value,
         padding_x=Size.BIG.value,
         width="100%",
-        max_width=MAX_WIDTH,                       
+        max_width=MAX_WIDTH,
     ),
-    rx.vstack(
-        rx.spacer(),
-        reproductor_spotify(),
-        #rx.script(src="js/spotify.js"),
-    ),
+    # rx.vstack(
+    #     rx.spacer(),
+    #     reproductor_spotify(),
+    #     #rx.script(src="js/spotify.js"),
+    # ),
     align_items="center",
-    )
+    id="musica",
+)

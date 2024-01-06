@@ -12,10 +12,11 @@ def video() -> rx.Component:
                             width: 100vw;
                         }
                         #title-container h1 { 
+                            background-color: rgba(0, 0, 0, .7);
                             font-size: 10vw;
                             text-align: center;
                             font-weight: 400;
-                            color: white;      
+                            mix-blend-mode: multiply;        
                         }
                         #background-video {
                             position: absolute;

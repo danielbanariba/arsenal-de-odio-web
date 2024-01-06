@@ -17,7 +17,7 @@ BATERISTA_FACEBOOK = "https://www.facebook.com/gerardo.irias.3"
 GUITARRISTA_SECUNDARIO_FACEBOOK = "https://www.facebook.com/profile.php?id=618660595"
 
 # INTEGRANTES - INSTAGRAM
-GUITARRISTA_PRINCIPAL_INSTAGRAM = ""
+GUITARRISTA_PRINCIPAL_INSTAGRAM = "https://www.instagram.com/emustainguevara/"
 VOCALISTA_INSTAGRAM = ""
 BAJISTA_INSTAGRAM = ""
 BATERISTA_INSTAGRAM = ""
@@ -49,4 +49,7 @@ WHATSAPP = "https://wa.me/50433245827" #TODO cambiar el numero para el que venda
 
 DANIEL_BANARIBA = "https://www.danielbanariba.com" 
 
+#DIRECCIONES DENTRO DE LA PAGINA
 HOME = "/"
+MUSICA = "#musica"
+MERCADERIA = "#mercaderia"

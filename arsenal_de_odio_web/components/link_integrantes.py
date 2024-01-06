@@ -20,6 +20,7 @@ def button_integrantes(image: str, nombre: str) -> rx.Component:
             rx.text(
                 nombre,
                 font_size=size.LARGE.value,
+                padding_y=size.VERY_SMALL.value,
             ),    
         ),
     )

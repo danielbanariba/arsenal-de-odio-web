@@ -25,8 +25,8 @@ def integrantes() -> rx.Component:
                                 view.viewBox_0
                             ),
                             icon(
-                                URL.GUITARRISTA_PRINCIPAL_YOUTUBE,
-                                "tiktok",
+                                URL.GUITARRISTA_PRINCIPAL_INSTAGRAM,
+                                "instagram",
                                 Size.BIG.value,
                                 Color.SECONDARY.value,
                                 view.viewBox_0

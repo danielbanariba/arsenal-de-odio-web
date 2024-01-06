@@ -1,18 +1,18 @@
 import reflex as rx 
 from arsenal_de_odio_web.styles.styles import MAX_WIDTH , Size, Color
-from arsenal_de_odio_web.components.link_icons import link #link_icon,
+from arsenal_de_odio_web.components.link_icons import link, linkv2 #link_icon,
 import arsenal_de_odio_web.url as url
 from arsenal_de_odio_web.components.icons import icon
-# ME quede por aqui https://youtu.be/h8Tn0ITRoQs?si=q-yUYV-8gr-oEMLk&t=4207
+from arsenal_de_odio_web.views.navbarv2 import navbarv2
 
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
             rx.center(
-                rx.desktop_only(
+                rx.box(
                     rx.hstack(
-                        link(
-                            url.BANDCAMP, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
+                        linkv2(
+                            url.MUSICA, #TODO Hacer una pagina aparte para todos los links de las diferentes plataformas de streaming
                             "MUSICA",
                             "right",
                         ),
@@ -21,22 +21,25 @@ def navbar() -> rx.Component:
                             "VIDEOS",
                             "right"  
                         ),
-                        link(
-                            url.INSTAGRAM,
-                            "HISTORIA",
+                        linkv2(
+                            url.MERCADERIA,
+                            "MERCADERIA",
                             "right",
-                        ),    
+                        ),
+                    ),
+                    display=["none", "none", "none", "flex", "flex"], 
+                ),
+                rx.hstack(
+                    rx.image(
+                        src="logo_arsenal.png", 
+                        alt="Logo de la banda Arsenal de Odio", 
+                        margin_top=Size.VERY_SMALL.value,
+                        justify_content="center",
+                        width="310px",  
+                        height="auto",
                     ),    
                 ),
-            rx.image(
-                src="logo_arsenal.png", 
-                alt="Logo de la banda Arsenal de Odio", 
-                margin_top=Size.VERY_SMALL.value,
-                justify_content="center",
-                width="310px",  
-                height="153px",
-            ),
-                rx.desktop_only(
+                rx.box(
                         rx.hstack(
                             link(
                                 url.FACEBOOK,
@@ -48,73 +51,77 @@ def navbar() -> rx.Component:
                                 "INSTAGRAM",
                                 "left",
                             ),  
-                        ),    
+                        ),
+                        display=["none", "none", "none", "flex", "flex"],
                     ),
-            rx.hstack(
-                rx.tablet_only(
-                    rx.hstack(
-                        link(
-                            url.BANDCAMP, 
-                            "MUSICA",
-                            "right",
-                        ),
-                        link(
-                            url.FACEBOOK,
-                            "VIDEOS",
-                            "right"  
-                        ),
-                        link(
-                            url.INSTAGRAM,
-                            "HISTORIA",
-                            "right",
-                        ),  
-                        link(
-                            url.FACEBOOK,
-                            "FACEBOOK",
-                            "left",
-                        ),
-                        link(
-                            url.INSTAGRAM,
-                            "INSTAGRAM",
-                            "left",
-                        ),  
-                    ),
-                ),
-                rx.center(
-                    rx.mobile_only(
+                rx.hstack(
+                    rx.box(
                         rx.hstack(
-                            icon(
+                            linkv2(
+                                url.MUSICA, 
+                                "MUSICA",
+                                "left",
+                            ),
+                            link(
                                 url.FACEBOOK,
-                                "facebook_navbar",
-                                Size.BIG.value,
-                                Color.PRIMARY.value,
-                                "0 0 512 512"
+                                "VIDEOS",
+                                "left"  
                             ),
-                            icon(
+                            linkv2(
+                                url.MERCADERIA,
+                                "MERCADERIA",
+                                "left",
+                            ),  
+                            link(
+                                url.FACEBOOK,
+                                "FACEBOOK",
+                                "left",
+                            ),
+                            link(
                                 url.INSTAGRAM,
-                                "instagram_navbar",
-                                Size.BIG.value,
-                                Color.PRIMARY.value,
-                                "0 0 512 512"
-                            ),
+                                "INSTAGRAM",
+                                "left",
+                            ),  
                         ),
-                    ), 
+                        display=["none", "none", "flex", "none", "none"],
+                    ),
+                    rx.container(
+                        rx.hstack(
+                            navbarv2(),
+                            rx.box(
+                                icon(
+                                    url.FACEBOOK,
+                                    "facebook_navbar",
+                                    Size.MUY_BIG.value,
+                                    Color.PRIMARY.value,
+                                    "0 0 512 512"
+                                ),
+                                padding_right=Size.VERY_SMALL.value,
+                                padding_button=Size.SMALL.value,
+                            ),
+                            rx.box(
+                                icon(
+                                    url.INSTAGRAM,
+                                    "instagram_navbar",
+                                    Size.MUY_BIG.value,
+                                    Color.PRIMARY.value,
+                                    "0 0 512 512"
+                                ),
+                            padding_left=Size.VERY_SMALL.value,
+                            padding_button=Size.SMALL.value,
+                            ),
+                        display=["flex", "flex", "none", "none", "none"], 
+                        ),
+                    ),
                 ),
+                flex_direction=["column", "column", "column", "row", "row"], 
+                width="100%",
             ),
-            flex_direction=["column", "column", "column", "row", "row"], #TODO Responsive, cambiar los  nombres, por iconos al detectar que se trata de un dispositivo movil 
-            #?ENCONTRE UNA POISBLE SOLUCION AQUI https://youtu.be/h8Tn0ITRoQs?si=TEXvWLFatM8urvGf&t=7046
-            #rx.mobie_only()
-            width="100%",
+            width="100%"
         ),
-        width="100%"
-    ),
-    position="sticky",
-    bg=Color.SECONDARY.value,
-    padding_x=Size.BIG.value, # El padding es el espacio que hay entre el borde y el texto
-    padding_y=Size.VERY_SMALL.value,
-    padding_top=Size.ZERO.value,
-    # ? estoy en duda si fija la barrar de navegacion o no
-    z_index="999",
-    # top="0",
-    width="100%",
-)
+        bg=Color.SECONDARY.value,
+        padding_x=Size.BIG.value, # El padding es el espacio que hay entre el borde y el texto
+        padding_y=Size.VERY_SMALL.value,
+        padding_top=Size.VERY_SMALL.value,
+        width="100%",
+    )
