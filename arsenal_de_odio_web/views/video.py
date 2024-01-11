@@ -4,9 +4,12 @@ from arsenal_de_odio_web.styles.styles import Size
 def video() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.html(
+            rx.html(#Oculta la barra horizontal de desplazamiento
                 '''
                     <style>
+                        body {
+                            overflow-x: hidden;
+                        }
                         #title-container {
                             position: relative;
                             width: 100vw;

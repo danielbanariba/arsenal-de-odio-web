@@ -3,7 +3,7 @@
 # from arsenal_de_odio_web.components.link_icons import link, linkv2 #link_icon,
 # import arsenal_de_odio_web.url as url
 # from arsenal_de_odio_web.components.icons import iconv2
-
+#TODO investigar porque al momento de desplegar en la pagina vercel no funciona el navbarv2
 # class DrawerState(rx.State):
 #     show_right: bool = False
 #     show_top: bool = False

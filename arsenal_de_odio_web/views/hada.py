@@ -49,5 +49,5 @@ def hada () -> rx.Component:
             </body>
         '''
         ),
-        center_content=True, 
+        center_content=True,
     )

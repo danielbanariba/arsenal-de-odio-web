@@ -6,7 +6,7 @@ from arsenal_de_odio_web.styles.styles import Size, Color, TextColor
 
 def footer() -> rx.Component:
     return rx.vstack(
-        rx.link(# * Cuando empiece a crear las paginas web a las bandas amigas, lo que tengo planeado hacer es que poner el mismo footer en todas las paginas web, pero que el footer tenga un link a mi pagina web
+        rx.link(
             rx.box(
                 rx.span(
                     """DANIEL\nBANARIBA""",
@@ -27,9 +27,7 @@ def footer() -> rx.Component:
             font_size=Size.MEDIUM.value,
             margin_top=Size.ZERO.value
         ),
-        #style=background_noise(),
         margin_bottom=Size.BIG.value,
-        padding_botoom=Size.BIG.value, # Para que se separare el texto de la parte de abajo
+        padding_botoom=Size.PEQUENIO.value, # Para que se separare el texto de la parte de abajo
         padding_x=Size.BIG.value, # Responsive, se separe el texto de los lados
-        spacing=Size.DEFAULT.value
     )

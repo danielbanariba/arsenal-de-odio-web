@@ -34,4 +34,5 @@ def mercaderia() -> rx.Component:
         bg_size = "cover",
         width="100%",
         id="mercaderia",
+        spacing=Size.BIG.value,
     )

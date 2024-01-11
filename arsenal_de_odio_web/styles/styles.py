@@ -1,6 +1,5 @@
 from enum import Enum
 import reflex as rx
-from .fonts import Font
 from .colors import TextColor, Color
 from .fonts import Font, FontWeight
 
@@ -36,7 +35,6 @@ BASE_STYLE = {
     "font_weight": "bold",
     "color": TextColor.PRIMARY.value,
     "background_color": Color.PRIMARY.value,
-    #"background_color": Color.PRIMARY.value,
     # No permite que se repita la imagen
     rx.Heading: {# ? rx.<propiedad> Nos permite modificar cada propiedad en nuestro componente
         "font_family": Font.DEFAULT.value,

@@ -1,3 +1,10 @@
+DANIEL_BANARIBA = "https://www.danielbanariba.com" 
+
+#DIRECCIONES DENTRO DE LA PAGINA
+HOME = "/"
+MUSICA = "#musica"
+MERCADERIA = "#mercaderia"
+
 #REDES SOCIALES
 FACEBOOK = "https://www.facebook.com/arsenaldeodio"
 INSTAGRAM = "https://www.instagram.com/arsenaldeodiooficial/"
@@ -46,10 +53,3 @@ GUITARRISTA_SECUNDARIO_TIKTOK = ""
 
 # WHATSAPP
 WHATSAPP = "https://wa.me/50433245827" #TODO cambiar el numero para el que venda
-
-DANIEL_BANARIBA = "https://www.danielbanariba.com" 
-
-#DIRECCIONES DENTRO DE LA PAGINA
-HOME = "/"
-MUSICA = "#musica"
-MERCADERIA = "#mercaderia"
