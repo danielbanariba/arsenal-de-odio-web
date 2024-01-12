@@ -26,9 +26,10 @@ def header() -> rx.Component:
                     alt="Arsenal de Odio - Muerte en el Mosh",
                     width="100%", #16em
                     heigh="100%",
-                    box_shadow = "7px 7px 10px rgba(0, 0, 0, 0.9)"#sombra
+                    box_shadow = "7px 7px 10px rgba(0, 0, 0, 0.9)",#sombra
                 ),
                 padding_bottom=Size.BIG.value,
+                padding_x=Size.DEFAULT.value,
             ),
             rx.vstack(
                 list_song(),
@@ -46,7 +47,6 @@ def header() -> rx.Component:
             flex_direction=["column", "column", "column", "row", "row"], #Responsive
         ),
         padding_top=Size.VERY_SMALL.value,
-        padding_x=Size.BIG.value,
         width="100%",
         max_width=MAX_WIDTH,
     ),

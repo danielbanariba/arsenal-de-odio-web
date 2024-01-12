@@ -3,7 +3,7 @@ from arsenal_de_odio_web.styles.styles import MAX_WIDTH , Size, Color
 from arsenal_de_odio_web.components.link_icons import link, linkv2 #link_icon,
 import arsenal_de_odio_web.url as url
 from arsenal_de_odio_web.components.icons import icon
-#from arsenal_de_odio_web.views.navbarv2 import navbarv2
+from arsenal_de_odio_web.views.navbarv2 import navbarv2
 
 def navbar() -> rx.Component:
     return rx.hstack(
@@ -87,7 +87,7 @@ def navbar() -> rx.Component:
                     ),
                     rx.container(
                         rx.hstack(
-                            #navbarv2(),
+                            navbarv2(),
                             rx.box(
                                 icon(
                                     url.FACEBOOK,

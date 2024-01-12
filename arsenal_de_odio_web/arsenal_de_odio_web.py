@@ -36,7 +36,6 @@ def index() -> rx.Component:
                 integrantes(),
                 footer(),
                 grain(),
-                width="100%",
                 spacing=Size.BIG.value,
             )
         
