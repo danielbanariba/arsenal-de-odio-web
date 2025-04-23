@@ -8,7 +8,16 @@ MAX_WIDTH = "1000px"
 
 
 class Size(Enum): # Tamanno de las imagenes
-    ZERO = "0px !important"
+    # Para propiedades spacing en componentes HStack/VStack (valores de 0-9)
+    ZERO = "0"
+    SMALL_SPACING = "1"
+    MEDIUM_SPACING = "2"
+    DEFAULT_SPACING = "3"
+    LARGE_SPACING = "4"
+    BIG_SPACING = "5"
+    
+    # Para propiedades CSS que necesitan valores con unidades
+    ZERO_PX = "0px !important"
     VERY_SMALL = "0.2em"
     SMALL = "0.5em"
     MEDIUM = "0.8em"
@@ -24,7 +33,7 @@ class Size(Enum): # Tamanno de las imagenes
 
 #Hojas de estilos
 STYLESHEETS = [
-    "fonts/fonts.css", # Ir al archvivo fonts.py para ver las fuentes
+    # "fonts/fonts.css", # Ir al archvivo fonts.py para ver las fuentes
     # TODO hacer una animacion con la imagen del hada de las birrias, Link de la pagina: https://animejs.com/documentation/#functionBasedPropVal 
     # TODO Y las funciones que mas me gustaron fueron: FUNCTION BASED VALUES
     "styles/grain.css",
@@ -36,11 +45,11 @@ BASE_STYLE = {
     "color": TextColor.PRIMARY.value,
     "background_color": Color.PRIMARY.value,
     # No permite que se repita la imagen
-    rx.Heading: {# ? rx.<propiedad> Nos permite modificar cada propiedad en nuestro componente
+    rx.heading: {# ? rx.<propiedad> Nos permite modificar cada propiedad en nuestro componente
         "font_family": Font.DEFAULT.value,
         "color": TextColor.PRIMARY.value,
     },
-    rx.Link: {# Desaparece el subrayado de los links
+    rx.link: {# Desaparece el subrayado de los links
         "text_decoration": "none",
         "_hover": {
             "color": TextColor.SECONDARY.value,

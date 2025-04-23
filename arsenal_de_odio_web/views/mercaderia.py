@@ -14,15 +14,15 @@ def mercaderia() -> rx.Component:
             color = Color.SECONDARY.value,
         ),
         rx.center(
-            rx.responsive_grid(
+            rx.grid(
                 producto("img/merch/camisa_hada_de_las_birrias.png", 
                          "CAMISA DEL HADA DE LAS BIRRIAS", 
                          "L. 350.00"),
                 producto("img/merch/cd2.png", 
                          "CD - MUERTE EN EL MOSH", 
                          "L. 450.00"),
-                columns=[1, 1, 1, 2],#ALV, esto es oro para lo responsive
-                spacing="6",
+                template_columns=["1fr", "1fr", "1fr", "1fr 1fr"],  # Equivalente a [1, 1, 1, 2]
+                gap="6",  # Equivalente a spacing="6"
             ),
             width="100%",
             padding=Size.BIG.value,
@@ -34,5 +34,5 @@ def mercaderia() -> rx.Component:
         bg_size = "cover",
         width="100%",
         id="mercaderia",
-        spacing=Size.BIG.value,
+        spacing=Size.DEFAULT_SPACING.value,
     )

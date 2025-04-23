@@ -8,7 +8,7 @@ def footer() -> rx.Component:
     return rx.vstack(
         rx.link(
             rx.box(
-                rx.span(
+                rx.text(
                     """DANIEL\nBANARIBA""",
                     style=styles.logo_canal,
                 ),
@@ -18,14 +18,14 @@ def footer() -> rx.Component:
             _hover={"color": "#ffc435"},
             alt="Logotipo de DanielBanariba.",
         ),
-        rx.span(
-            rx.span(
+        rx.text(
+            rx.text(
                 f" © 2023-{datetime.datetime.today().year}, ",
                 font_size=Size.PEQUENIO.value,
             ),
             "TODOS LOS DERECHOS RESERVADOS.",
             font_size=Size.MEDIUM.value,
-            margin_top=Size.ZERO.value
+            margin_top=Size.ZERO_PX.value
         ),
         margin_bottom=Size.BIG.value,
         padding_botoom=Size.PEQUENIO.value, # Para que se separare el texto de la parte de abajo

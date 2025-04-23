@@ -31,12 +31,12 @@ def index() -> rx.Component:
                     ),
                 ),
                 hada(),
-                mercaderia(),
+                # mercaderia(), #Genera problemas
                 video(),
                 integrantes(),
                 footer(),
                 grain(),
-                spacing=Size.BIG.value,
+                spacing=Size.DEFAULT_SPACING.value,
             )
         
 
@@ -61,5 +61,3 @@ app.add_page(
     title="Arsenal de Odio",
     description="Arsenal de Odio es una banda de Trash Metal de la ciudad de Tegucigalpa, Honduras.",
 )
-
-app.compile()

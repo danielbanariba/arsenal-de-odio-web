@@ -9,7 +9,7 @@ import arsenal_de_odio_web.styles.const as view
 def integrantes() -> rx.Component:
     return rx.vstack(
         rx.center(# responsive, apila cada uno encima del otro cuando detecta que la pantalla es pequeña
-            rx.responsive_grid(
+            rx.grid(
                 rx.box(
                     button_integrantes(
                         "integrantes/9.jpg",
@@ -31,7 +31,7 @@ def integrantes() -> rx.Component:
                                 Color.SECONDARY.value,
                                 view.viewBox_0
                             ),
-                            spacing=Size.SMALL.value,    
+                            spacing=Size.SMALL_SPACING.value,
                         ),
                     ),
                 ),
@@ -94,9 +94,9 @@ def integrantes() -> rx.Component:
                         ),
                     ),
                 ),
-            columns=[1, 2, 3, 4, 5],
-            spacing="6",
+                template_columns=["1fr", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)", "repeat(5, 1fr)"],  # Equivalente a [1, 2, 3, 4, 5]
+                gap="6",  # Equivalente a spacing="6"
+            ),
         ),
-    ),
-    width="100%",
-)
+        width="100%",
+    )

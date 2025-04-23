@@ -16,7 +16,7 @@ def header() -> rx.Component:
             ),
             font_size=Size.VERY_BIG.value,
             color = Color.SECONDARY.value,
-            padding_bottom=Size.ZERO.value,
+            padding_bottom=Size.ZERO_PX.value,
             padding_top=Size.VERY_SMALL.value,
         ),
         rx.flex(

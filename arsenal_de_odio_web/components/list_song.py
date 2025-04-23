@@ -5,10 +5,10 @@ from arsenal_de_odio_web.styles.styles import Size
 def list_song() -> rx.Component:
     return rx.vstack(
         # rx.box(
-        #     rx.span(
+        #     rx.text(
         #         "Aqui va a ir una descripcion del album de la banda, y todo lo que se va a tratar del disco"
         #     ),
-        #     rx.span(
+        #     rx.text(
         #         "Mas detalles del disco como el año de lanzamiento, el genero, etc."
         #     ),   
         #     align_items="start",# Hace todo el texto para la izquierda

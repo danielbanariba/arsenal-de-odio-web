@@ -8,7 +8,7 @@ def button_integrantes(image: str, nombre: str) -> rx.Component:
         rx.avatar(
             name=nombre,
             src=image,
-            size="2xl",
+            size="9",
             bg=Color.PRIMARY.value, # ? Fondo del avatar
             border="4px",
             border_color=Color.SECONDARY.value,
