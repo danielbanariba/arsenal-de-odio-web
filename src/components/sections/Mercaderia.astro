@@ -1,0 +1,81 @@
+---
+// Array de productos - FÁCIL DE MODIFICAR
+const productos = [
+	{
+		nombre: "CAMISETA ARSENAL DE ODIO",
+		precio: "L. 250",
+		imagen: "/img/merch/camisa_ejemplo.png",
+		descripcion: "Camiseta oficial de la banda"
+	},
+	{
+		nombre: "CD MUERTE EN EL MOSH",
+		precio: "L. 150",
+		imagen: "/img/merch/cd.png",
+		descripcion: "Álbum físico completo"
+	},
+	// Agrega más productos aquí...
+];
+---
+
+<section id="mercaderia" class="w-full py-16 bg-black">
+	<div class="max-w-7xl mx-auto px-4">
+		<!-- Title -->
+		<div class="text-center mb-12">
+			<h2 class="text-6xl md:text-8xl font-cartoon-toy text-white mb-4">
+				MERCADERÍA
+			</h2>
+			<p class="text-xl font-cartoon-toy text-white/70">
+				Apoya a la banda con nuestros productos oficiales
+			</p>
+		</div>
+
+		<!-- Products Grid -->
+		<div class="flex flex-wrap justify-center gap-8 w-full mb-12">
+			{productos.map((producto) => (
+				<div class="bg-white/5 border-2 border-white/10 rounded-lg overflow-hidden hover:border-primary transition-all duration-300 group" style="width: 20rem;">
+					<!-- Image -->
+					<div class="aspect-square bg-white/5 overflow-hidden">
+						<img
+							src={producto.imagen}
+							alt={producto.nombre}
+							class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+						/>
+					</div>
+
+					<!-- Info -->
+					<div class="p-6">
+						<h3 class="font-cartoon-toy text-xl text-white mb-2">
+							{producto.nombre}
+						</h3>
+						<p class="text-white/60 font-cartoon-toy text-sm mb-4">
+							{producto.descripcion}
+						</p>
+						<div class="flex items-center justify-between">
+							<span class="font-cartoon-toy text-2xl text-primary">
+								{producto.precio}
+							</span>
+							<button class="px-4 py-2 bg-primary hover:bg-primary/80 text-white font-cartoon-toy text-sm rounded transition-colors">
+								CONTACTAR
+							</button>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+
+		<!-- CTA -->
+		<div class="text-center">
+			<p class="text-white/70 font-cartoon-toy text-lg mb-4">
+				¿Interesado en nuestros productos?
+			</p>
+			<a
+				href="https://www.facebook.com/arsenaldeodio"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/80 text-white font-cartoon-toy text-lg rounded-lg transition-all"
+			>
+				CONTÁCTANOS POR FACEBOOK
+			</a>
+		</div>
+	</div>
+</section>

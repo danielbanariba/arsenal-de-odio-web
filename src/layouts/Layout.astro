@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'Arsenal de Odio es una banda de Thrash Metal de la ciudad de Tegucigalpa, Honduras.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" data-theme="arsenal">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YGHT3XJFS"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-3YGHT3XJFS');
+		</script>
+	</head>
+	<body>
+		<slot />
+
+		<!-- Grain texture effect -->
+		<div id="grain"></div>
+	</body>
+</html>

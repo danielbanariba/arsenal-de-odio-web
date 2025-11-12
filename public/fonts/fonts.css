@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Cartoonish";
+  src: url("Cartoonish.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CartoonToy";
+  src: url("CartoonToy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HeavyEquipment";
+  src: url("HeavyEquipment.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pulse_virgin";
+  src: url("Pulse_virgin.ttf") format("truetype");
+}

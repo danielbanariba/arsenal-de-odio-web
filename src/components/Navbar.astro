@@ -1,0 +1,121 @@
+---
+import { MUSICA, MERCADERIA, FACEBOOK, INSTAGRAM } from '../constants/urls';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b-2 border-secondary/20 shadow-lg">
+	<div class="max-w-7xl mx-auto px-4 py-3">
+		<!-- Desktop Layout -->
+		<div class="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-8">
+			<!-- Left Links -->
+			<div class="flex items-center justify-end gap-6">
+				<a
+					href={MUSICA}
+					class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors"
+				>
+					MUSICA
+				</a>
+				<a
+					href={FACEBOOK}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors"
+				>
+					VIDEOS
+				</a>
+				<a
+					href={MERCADERIA}
+					class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors"
+				>
+					MERCADERIA
+				</a>
+			</div>
+
+			<!-- Center Logo -->
+			<div class="flex justify-center">
+				<a href="/">
+					<img
+						src="/logo_arsenal.png"
+						alt="Logo de la banda Arsenal de Odio"
+						class="h-20 w-auto"
+					/>
+				</a>
+			</div>
+
+			<!-- Right Links -->
+			<div class="flex items-center justify-start gap-6">
+				<a
+					href={FACEBOOK}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors"
+				>
+					FACEBOOK
+				</a>
+				<a
+					href={INSTAGRAM}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors"
+				>
+					INSTAGRAM
+				</a>
+			</div>
+		</div>
+
+		<!-- Mobile Layout -->
+		<div class="lg:hidden flex items-center justify-between">
+			<button
+				id="mobile-menu-button"
+				class="text-text-primary p-2"
+				aria-label="Toggle menu"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+
+			<a href="/" class="flex-1 flex justify-center">
+				<img
+					src="/logo_arsenal.png"
+					alt="Logo de la banda Arsenal de Odio"
+					class="h-16 w-auto"
+				/>
+			</a>
+
+			<div class="w-10"></div>
+		</div>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="hidden lg:hidden mt-4 pb-2 border-t border-secondary/30 pt-4">
+			<div class="flex flex-col gap-3">
+				<a href={MUSICA} class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors">
+					MUSICA
+				</a>
+				<a href={FACEBOOK} target="_blank" rel="noopener noreferrer" class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors">
+					VIDEOS
+				</a>
+				<a href={MERCADERIA} class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors">
+					MERCADERIA
+				</a>
+				<a href={FACEBOOK} target="_blank" rel="noopener noreferrer" class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors">
+					FACEBOOK
+				</a>
+				<a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" class="text-text-primary font-cartoon-toy text-lg hover:text-secondary transition-colors">
+					INSTAGRAM
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<div class="h-28"></div>
+
+<script>
+	const menuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	menuButton?.addEventListener('click', () => {
+		mobileMenu?.classList.toggle('hidden');
+	});
+</script>

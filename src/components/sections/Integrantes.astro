@@ -1,0 +1,114 @@
+---
+import {
+	GUITARRISTA_PRINCIPAL_FACEBOOK,
+	GUITARRISTA_PRINCIPAL_INSTAGRAM,
+	GUITARRISTA_PRINCIPAL_YOUTUBE,
+	VOCALISTA_FACEBOOK,
+	BATERISTA_FACEBOOK,
+	BAJISTA_FACEBOOK,
+	GUITARRISTA_SECUNDARIO_FACEBOOK
+} from '../../constants/urls';
+
+const members = [
+	{
+		name: "EMERSON GUEVARA",
+		image: "/integrantes/9.jpg",
+		socials: [
+			{ url: GUITARRISTA_PRINCIPAL_FACEBOOK, icon: "/icons/facebook.svg", alt: "Facebook" },
+			{ url: GUITARRISTA_PRINCIPAL_INSTAGRAM, icon: "/icons/instagram.svg", alt: "Instagram" },
+			{ url: GUITARRISTA_PRINCIPAL_YOUTUBE, icon: "/icons/youtube.svg", alt: "YouTube" }
+		]
+	},
+	{
+		name: "OSCAR OSORTO",
+		image: "/integrantes/8.jpg",
+		socials: [
+			{ url: VOCALISTA_FACEBOOK, icon: "/icons/facebook.svg", alt: "Facebook" }
+		]
+	},
+	{
+		name: "GERARDO IRIAS",
+		image: "/integrantes/10.jpg",
+		socials: [
+			{ url: BATERISTA_FACEBOOK, icon: "/icons/facebook.svg", alt: "Facebook" }
+		]
+	},
+	{
+		name: "SAADY RUEDA",
+		image: "/integrantes/11.jpg",
+		socials: [
+			{ url: BAJISTA_FACEBOOK, icon: "/icons/facebook.svg", alt: "Facebook" }
+		]
+	},
+	{
+		name: "CARLOS OSORTO",
+		image: "/integrantes/12.jpg",
+		socials: [
+			{ url: GUITARRISTA_SECUNDARIO_FACEBOOK, icon: "/icons/facebook.svg", alt: "Facebook" }
+		]
+	}
+];
+---
+
+<section class="w-full py-16 bg-primary relative overflow-hidden">
+	<div class="max-w-7xl mx-auto px-4">
+		<!-- Title -->
+		<div class="text-center mb-12">
+			<h2 class="text-6xl md:text-8xl font-cartoon-toy text-white mb-4">
+				LA BANDA
+			</h2>
+			<p class="text-xl font-cartoon-toy text-white/80">
+				Los guerreros del thrash metal hondureño
+			</p>
+		</div>
+
+		<!-- Members Grid -->
+		<div class="flex flex-wrap justify-center gap-6 w-full">
+			{members.map((member) => (
+				<div class="flex flex-col items-center group" style="width: 12rem;">
+					<!-- Photo -->
+					<div class="relative w-full aspect-[3/4] mb-4 overflow-hidden rounded-lg border-4 border-white/20">
+						<img
+							src={member.image}
+							alt={member.name}
+							class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+						/>
+					</div>
+
+					<!-- Name -->
+					<h3 class="text-center font-cartoon-toy text-white text-lg mb-3">
+						{member.name}
+					</h3>
+
+					<!-- Social Icons -->
+					<div class="flex gap-2 justify-center">
+						{member.socials.map(social => (
+							<a
+								href={social.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full transition-all"
+							>
+								<img
+									src={social.icon}
+									alt={social.alt}
+									class="w-5 h-5"
+								/>
+							</a>
+						))}
+					</div>
+				</div>
+			))}
+		</div>
+
+		<!-- CTA -->
+		<div class="text-center mt-16">
+			<p class="text-2xl font-cartoon-toy text-white mb-6">
+				¿QUIERES VERNOS EN VIVO?
+			</p>
+			<p class="text-lg font-cartoon-toy text-white/80 mb-6">
+				Síguenos en nuestras redes para conocer las próximas fechas
+			</p>
+		</div>
+	</div>
+</section>

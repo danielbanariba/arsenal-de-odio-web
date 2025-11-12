@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'CartoonToy';
+  src: url('/fonts/CartoonToy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cartoonish';
+  src: url('/fonts/Cartoonish.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeavyEquipment';
+  src: url('/fonts/HeavyEquipment.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pulse_virgin';
+  src: url('/fonts/Pulse_virgin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'CartoonToy', sans-serif;
+}
+
+body {
+  background-color: #cb2c1d;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Global centering - only for direct content divs with max-w class */
+.max-w-7xl {
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure sections are full width by default */
+section, nav, footer {
+  width: 100%;
+}
+
+/* Grain Texture Effect */
+#grain {
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 300;
+  pointer-events: none;
+}
+
+#grain::after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://assets.website-files.com/5dff182dc3faab4c98b08388/5dff21c5e65e0610a8d38b86_noisy-texture-100x100-o5-d10-c-FFFFFA-t1.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  30% { transform: translate(3%, -15%); }
+  50% { transform: translate(12%, 9%); }
+  70% { transform: translate(9%, 4%); }
+  90% { transform: translate(-1%, 7%); }
+}

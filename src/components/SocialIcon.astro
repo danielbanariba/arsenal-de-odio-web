@@ -1,0 +1,25 @@
+---
+interface Props {
+	href: string;
+	icon: string;
+	alt: string;
+	size?: string;
+}
+
+const { href, icon, alt, size = "w-8 h-8" } = Astro.props;
+---
+
+{href && (
+	<a
+		href={href}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="transition-transform hover:scale-110 hover:opacity-80"
+	>
+		<img
+			src={icon}
+			alt={alt}
+			class={`${size} object-contain`}
+		/>
+	</a>
+)}
