@@ -16,27 +16,28 @@ import { SPOTIFY, FACEBOOK, INSTAGRAM } from '../../constants/urls';
 	</div>
 
 	<!-- Content -->
-	<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+	<div class="relative z-10 text-center px-4 max-w-5xl mx-auto" data-hero>
 		<!-- Logo -->
-		<div class="mb-8">
+		<div class="mb-10" data-hero-item>
 			<img
 				src="/logo_arsenal.png"
 				alt="Arsenal de Odio"
 				class="w-full max-w-xl mx-auto drop-shadow-2xl"
+				data-hero-logo
 			/>
 		</div>
 
 		<!-- Main Text -->
-		<h1 class="text-5xl md:text-7xl font-cartoon-toy font-bold text-white mb-4 tracking-wider">
+		<h1 class="text-5xl md:text-7xl font-cartoon-toy font-bold text-white mb-6 tracking-wider" data-hero-item>
 			THRASH METAL
 		</h1>
 
-		<p class="text-xl md:text-2xl font-cartoon-toy text-white/90 mb-8">
+		<p class="text-xl md:text-2xl font-cartoon-toy text-white/90 mb-10" data-hero-item>
 			Desde Tegucigalpa, Honduras
 		</p>
 
 		<!-- Social Icons - Simple and clean -->
-		<div class="flex gap-6 justify-center">
+		<div class="flex gap-6 justify-center" data-hero-item>
 			<a
 				href={FACEBOOK}
 				target="_blank"

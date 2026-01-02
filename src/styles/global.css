@@ -1,33 +1,33 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Custom Fonts */
 @font-face {
-  font-family: 'CartoonToy';
-  src: url('/fonts/CartoonToy.ttf') format('truetype');
+  font-family: "CartoonToy";
+  src: url("/fonts/CartoonToy.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cartoonish';
-  src: url('/fonts/Cartoonish.ttf') format('truetype');
+  font-family: "Cartoonish";
+  src: url("/fonts/Cartoonish.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'HeavyEquipment';
-  src: url('/fonts/HeavyEquipment.ttf') format('truetype');
+  font-family: "HeavyEquipment";
+  src: url("/fonts/HeavyEquipment.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Pulse_virgin';
-  src: url('/fonts/Pulse_virgin.otf') format('opentype');
+  font-family: "Pulse_virgin";
+  src: url("/fonts/Pulse_virgin.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,13 +42,27 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'CartoonToy', sans-serif;
+  font-family: "CartoonToy", sans-serif;
 }
 
 body {
   background-color: #cb2c1d;
-  color: #FFFFFF;
+  color: #ffffff;
   overflow-x: hidden;
+}
+
+html.js-anim [data-reveal],
+html.js-anim [data-reveal-item],
+html.js-anim [data-hero-item] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 24px, 0);
+}
+
+[data-reveal],
+[data-reveal-item],
+[data-hero-item] {
+  will-change: transform, opacity;
 }
 
 /* Global centering - only for direct content divs with max-w class */
@@ -61,7 +75,9 @@ body {
 }
 
 /* Ensure sections are full width by default */
-section, nav, footer {
+section,
+nav,
+footer {
   width: 100%;
 }
 
@@ -89,10 +105,29 @@ section, nav, footer {
 }
 
 @keyframes grain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  30% { transform: translate(3%, -15%); }
-  50% { transform: translate(12%, 9%); }
-  70% { transform: translate(9%, 4%); }
-  90% { transform: translate(-1%, 7%); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(12%, 9%);
+  }
+  70% {
+    transform: translate(9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an Astro-based web application for "Arsenal de Odio", a Thrash Metal band from Tegucigalpa, Honduras. The application is built using Astro v5, Tailwind CSS 3, DaisyUI, and React islands for interactive components. It displays band information, members, merchandise, and media content.
+This is an Astro-based web application for "Arsenal de Odio", a Thrash Metal band from Tegucigalpa, Honduras. The application is built using Astro v5, Tailwind CSS v4 (integrated via Vite), DaisyUI, and React islands for interactive components. It displays band information, members, merchandise, and media content.
 
 ## Development Commands
 
@@ -47,7 +47,7 @@ The built files are in the `dist/` directory after running `npm run build`. Depl
 - **Pages**: `src/pages/` - Route pages (currently just index.astro for single-page app)
 - **Layouts**: `src/layouts/` - Page layouts with common structure (Layout.astro)
 - **Components**: `src/components/` - Reusable Astro and React components
-  - `sections/` - Main page sections (Inicio, Header, Video, Integrantes)
+  - `sections/` - Main page sections (Inicio, Header, Video, Integrantes, Mercaderia)
   - Other components (Navbar, Footer, SpotifyPlayer, SocialIcon)
 - **Styles**: `src/styles/` - Global styles and Tailwind configuration
 - **Constants**: `src/constants/` - TypeScript constants (urls.ts for all external links)
@@ -56,7 +56,8 @@ The built files are in the `dist/` directory after running `npm run build`. Depl
 ### Key Architectural Patterns
 
 1. **Component-Based Architecture**: Astro components (.astro files) for static content, React components for interactive features
-2. **Tailwind CSS + DaisyUI Styling**:
+2. **Tailwind CSS v4 + DaisyUI Styling**:
+   - Tailwind v4 integrated via Vite plugin (not PostCSS)
    - Custom theme defined in `tailwind.config.mjs`
    - Brand colors, custom fonts, and spacing utilities
    - DaisyUI components available with "arsenal" theme
@@ -90,8 +91,14 @@ The project uses Tailwind utility classes throughout. Custom values are defined 
 // Custom colors
 bg-primary          // #cb2c1d (Arsenal red)
 bg-secondary        // #ffc435 (Arsenal yellow)
-text-text-primary   // #FFFFFF (white text)
-text-secondary      // #ffc435 (yellow text)
+bg-accent           // #EA5940 (Arsenal orange)
+bg-logo-canal       // #f2f2f2 (light gray)
+
+// Text colors
+text-text-primary   // #FFFFFF (white)
+text-text-secondary // #cb2c1d (red)
+text-text-tertiary  // #b7adae (gray)
+text-text-amarillo  // #e5df17 (yellow)
 
 // Custom fonts
 font-cartoon-toy        // Main brand font
@@ -99,9 +106,19 @@ font-cartoonish
 font-heavy-equipment
 font-pulse-virgin       // Logo font
 
-// Custom spacing
-py-big              // 1.9em
-text-very-big       // 4em font size
+// Custom spacing (based on em units)
+p-very-small        // 0.2em
+p-small             // 0.5em
+p-medium            // 0.8em
+p-default           // 1em
+p-pequenio          // 1.2em
+p-large             // 1.5em
+p-grandelogo        // 1.7em
+p-big               // 1.9em
+p-muy-big           // 2.5em
+p-plataformas       // 3em
+p-very-big          // 4em
+p-gigante           // 8em
 max-w-content       // 1000px max width
 ```
 

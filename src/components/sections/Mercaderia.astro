@@ -17,10 +17,10 @@ const productos = [
 ];
 ---
 
-<section id="mercaderia" class="w-full py-16 bg-black">
+<section id="mercaderia" class="w-full py-20 bg-black">
 	<div class="max-w-7xl mx-auto px-4">
 		<!-- Title -->
-		<div class="text-center mb-12">
+		<div class="text-center mb-16" data-reveal>
 			<h2 class="text-6xl md:text-8xl font-cartoon-toy text-white mb-4">
 				MERCADERÍA
 			</h2>
@@ -30,9 +30,9 @@ const productos = [
 		</div>
 
 		<!-- Products Grid -->
-		<div class="flex flex-wrap justify-center gap-8 w-full mb-12">
+		<div class="flex flex-wrap justify-center gap-10 w-full mb-14" data-reveal-stagger>
 			{productos.map((producto) => (
-				<div class="bg-white/5 border-2 border-white/10 rounded-lg overflow-hidden hover:border-primary transition-all duration-300 group" style="width: 20rem;">
+				<div class="bg-white/5 border-2 border-white/10 rounded-lg overflow-hidden hover:border-primary transition-all duration-300 group" style="width: 20rem;" data-reveal-item>
 					<!-- Image -->
 					<div class="aspect-square bg-white/5 overflow-hidden">
 						<img
@@ -43,11 +43,11 @@ const productos = [
 					</div>
 
 					<!-- Info -->
-					<div class="p-6">
+					<div class="p-7">
 						<h3 class="font-cartoon-toy text-xl text-white mb-2">
 							{producto.nombre}
 						</h3>
-						<p class="text-white/60 font-cartoon-toy text-sm mb-4">
+						<p class="text-white/60 font-cartoon-toy text-sm mb-5">
 							{producto.descripcion}
 						</p>
 						<div class="flex items-center justify-between">
@@ -64,8 +64,8 @@ const productos = [
 		</div>
 
 		<!-- CTA -->
-		<div class="text-center">
-			<p class="text-white/70 font-cartoon-toy text-lg mb-4">
+		<div class="text-center" data-reveal>
+			<p class="text-white/70 font-cartoon-toy text-lg mb-6">
 				¿Interesado en nuestros productos?
 			</p>
 			<a
